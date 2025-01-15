@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chest X-Ray Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        
+        <header class="header">
+            <h1>Chest X-Ray Tuberculosis Prediction</h1>
+            <p class="sub-heading">AI-Powered model for detecting tuberculosis from chest X-ray images.</p>
+        </header>
+
+        
+        <section class="about-model">
+            <h2>About Our Model</h2>
+            <p>Our model uses deep learning algorithms, trained with thousands of chest X-rays to accurately predict tuberculosis.</p>
+            <div class="icons-container">
+                <div class="icon-box">
+                    <i class="fas fa-brain icon"></i>
+                    <p><strong>AI Model</strong><br> EfficientNet for classification.</p>
+                </div>
+                <div class="icon-box">
+                    <i class="fas fa-x-ray icon"></i>
+                    <p><strong>X-Ray Input</strong><br> Precise X-ray image analysis.</p>
+                </div>
+                <div class="icon-box">
+                    <i class="fas fa-stethoscope icon"></i>
+                    <p><strong>Diagnosis Result</strong><br> Instant diagnosis based on input.</p>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="file-upload">
+            <div class="card">
+                <h3>Upload Chest X-Ray</h3>
+                <form action="/predict" method="POST" enctype="multipart/form-data">
+                    <input type="file" name="file" accept="image/*" required>
+                    <button type="submit">Predict</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    
+    <div class="floating">
+        <p>Optimized Prediction</p>
+    </div>
+</body>
+</html>
